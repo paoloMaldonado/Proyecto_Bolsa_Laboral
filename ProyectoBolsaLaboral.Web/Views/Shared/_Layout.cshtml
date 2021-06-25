@@ -10,8 +10,7 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-primary border-bottom box-shadow mb-3">
-            <div class="container">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light mb-3 mt-2 mr-5 ml-5">
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Tu Nuevo Trabajo</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
@@ -20,20 +19,16 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Index">Buscar Empleo</a>
+                            <a class="nav-link text-black" asp-area="" asp-controller="Home" asp-action="Index">Buscar Empleo</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Privacy">Buscar Empresas</a>
+                            <a class="nav-link text-black" asp-area="" asp-controller="Home" asp-action="Privacy">Buscar Empresas</a>
                         </li>
                     </ul>
-                </div>
-                <button  id="btn_acc_emp" type="button">
-                    Acceso Empresa
-                </button>
-                <button  id="btn_acc_cand" type="button">
-                    Acceso Candidato
-                </button>
-            </div>
+                    <div>
+                        <button type="button" class="btn btn-outline-primary btn-sm">Acceso empresas</button>
+                        <button type="button" class="btn btn-primary btn-sm">Acceso candidatos</button>
+                    </div>
         </nav>
     </header>
     <div class="container">
@@ -41,12 +36,14 @@
             @RenderBody()
         </main>
     </div>
-
-    <footer class="border-top footer text-muted bg-primary">
-        <div class="container">
-            &copy; 2021 - Tu Nuevo Trabajo - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+    
+    <footer class="footer">
+        <div class="text-center p-2" style="background-color: rgba(0, 0, 0, 0.05);">
+            © 2021 Copyright:
+            <a class="text-reset fw-bold" href="https://mdbootstrap.com/">Tu nuevo trabajo</a>
         </div>
     </footer>
+
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
