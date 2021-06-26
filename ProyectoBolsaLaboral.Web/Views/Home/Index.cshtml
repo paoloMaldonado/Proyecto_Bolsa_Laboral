@@ -6,3 +6,26 @@
     <h1 class="display-4">Welcome</h1>
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>
+
+@Html.Hidden("RedirectTo", Url.Action("Index", "Candidato"));
+
+
+<script type="text/javascript">
+
+    var url = $("#RedirectTo").val();
+
+    $("#accCandidato").click(function () {
+        $.ajax({
+            type: 'GET',
+            url: '/Candidato/Index',
+            success: function (result) {
+                if (result.UserFriendlyErrMsg === 'Some Message') {
+                    // display a Prompt
+                    alert("Message: " + result.UserFriendlyErrMsg);
+                    // redirect us to the new page
+                    location.href = url;
+                }
+                $('#friendlyMsg').html(result.UserFriendlyErrMsg);
+            }
+        });
+</script>

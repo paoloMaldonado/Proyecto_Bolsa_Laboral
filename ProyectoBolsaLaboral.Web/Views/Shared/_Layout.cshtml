@@ -7,6 +7,10 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
     <link href="~/Tu_Nuevo_Trabajo.ico" rel="icon" />
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
 </head>
 <body>
     <header>
@@ -27,7 +31,10 @@
                     </ul>
                     <div>
                         <button type="button" class="btn btn-outline-primary btn-sm">Acceso empresas</button>
-                        <button type="button" class="btn btn-primary btn-sm">Acceso candidatos</button>
+                        <form asp-controller="Candidato" asp-action="Index">
+                            <input type="submit" name="accCnd" value="Acceso Candidatos" class="btn btn-primary"/>
+                        </form>
+
                     </div>
         </nav>
     </header>
@@ -44,8 +51,7 @@
         </div>
     </footer>
 
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
