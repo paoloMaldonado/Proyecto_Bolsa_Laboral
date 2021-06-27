@@ -15,28 +15,28 @@
 <body>
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light mb-3 mt-2 mx-5">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Tu Nuevo Trabajo</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-black" asp-area="" asp-controller="Home" asp-action="Index">Buscar Empleo</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-black" asp-area="" asp-controller="Home" asp-action="Privacy">Buscar Empresas</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-black" asp-area="" asp-controller="Home" asp-action="Privacy">Crear CV</a>
-                        </li>
-                    </ul>
-                    <div>
-                        <a class="btn btn-outline-primary btn-sm" asp-controller="Candidato" asp-action="Index">Acceso candidato</a>
-                        <a class="btn btn-primary btn-sm" asp-controller="" asp-action="">Acceso empresa</a>
-                    </div>
+            <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Tu Nuevo Trabajo</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                <ul class="navbar-nav flex-grow-1">
+                    <li class="nav-item">
+                        <a class="nav-link text-black" asp-area="" asp-controller="Home" asp-action="Index">Buscar Empleo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-black" asp-area="" asp-controller="Home" asp-action="Privacy">Buscar Empresas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-black" asp-area="" asp-controller="Resume" asp-action="Index">Crear CV</a>
+                    </li>
+                </ul>
+                <div>
+                    <a class="btn btn-outline-primary btn-sm" asp-controller="Candidato" asp-action="Index">Acceso candidato</a>
+                    <a class="btn btn-primary btn-sm" asp-controller="" asp-action="">Acceso empresa</a>
                 </div>
+            </div>
         </nav>
     </header>
     <div class="container">
@@ -44,7 +44,7 @@
             @RenderBody()
         </main>
     </div>
-    
+
     <footer class="footer">
         <div class="text-center p-2" style="background-color: rgba(0, 0, 0, 0.05);">
             © 2021 Copyright:
@@ -52,6 +52,8 @@
         </div>
     </footer>
 
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css" />
 
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)

@@ -1,8 +1,176 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
+﻿
+<div class="pb-2">
+    <h4>Empieza a crear tu CV</h4>
+    <p>Rellena el formulario con la informacion requerida</p>
+</div>
 
-
-
+<div class="accordion" id="accordionExample">
+    <div class="card z-depth-0 bordered">
+        <div class="card-header" id="headingOne">
+            <h5 class="mb-0">
+                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne"
+                        aria-expanded="true" aria-controls="collapseOne">
+                    Datos personales
+                </button>
+            </h5>
+        </div>
+        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+             data-parent="#accordionExample">
+            <div class="card-body">
+                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3
+                wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum
+                eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla
+                assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred
+                nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer
+                farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus
+                labore sustainable.
+            </div>
+        </div>
+    </div>
+    <div class="card z-depth-0 bordered">
+        <div class="card-header" id="headingTwo">
+            <h5 class="mb-0">
+                <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                        data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    Estudios
+                </button>
+            </h5>
+        </div>
+        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+            <div class="card-body">
+                <form>
+                    <div class="form-group row">
+                        <div class="col-sm-3">Tengo estudios superiores</div>
+                        <div class="col-sm-9">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="gridCheck1">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="inputInstruccion" class="col-sm-3 col-form-label">Grado de instruccion</label>
+                        <div class="col-sm-9">
+                            <select class="form-control" id="inputInstruccion">
+                                <option value="" disabled selected hidden>(Indicar nivel de estudios)</option>
+                                <option value="Primaria">Primaria</option>
+                                <option value="Secundaria">Secundaria</option>
+                                <option value="Superior">Superior</option>
+                                <option value="Master">Master</option>
+                                <option value="Doctor/PhD">Doctor/PhD</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="inputEspecialidad" class="col-sm-3 col-form-label">Especialidad</label>
+                        <div class="col-sm-9">
+                            <select class="form-control" id="inputEspecialidad">
+                                <option value="" disabled selected hidden>(Indicar especialidad)</option>
+                                <!-- TODO se llena de la base de datos-->
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="inputDate1" class="col-sm-3 col-form-label">Fecha de inicio</label>
+                        <div class="col-sm-3 input-group date" data-provide="datepicker">
+                            <input type="text" class="form-control" placeholder="(Indicar fecha de inicio)">
+                            <div class="input-group-addon">
+                                <span class="glyphicon glyphicon-th"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="inputDate2" class="col-sm-3 col-form-label">Fecha de finalizacion</label>
+                        <div class="col-sm-3 input-group date" data-provide="datepicker">
+                            <input type="text" class="form-control" placeholder="(Indicar fecha de inicio)">
+                            <div class="input-group-addon">
+                                <span class="glyphicon glyphicon-th"></span>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-check">
+                                <label class="form-check-label pr-5" for="gridCheck2">
+                                    Aun no finalizo
+                                </label>
+                                <input class="form-check-input" type="checkbox" id="gridCheck2">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="inputIES" class="col-sm-3 col-form-label">Centro de estudios</label>
+                        <div class="col-sm-9">
+                            <input class="form-control" if="inputIES" type="text" placeholder="(Indicar centro de estudios)">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-sm-10 pt-2">
+                            <button type="submit" class="btn btn-primary">Guardar</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="card z-depth-0 bordered">
+        <div class="card-header" id="headingThree">
+            <h5 class="mb-0">
+                <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                        data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    Experiencia
+                </button>
+            </h5>
+        </div>
+        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+            <div class="card-body">
+                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3
+                wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum
+                eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla
+                assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred
+                nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer
+                farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus
+                labore sustainable.
+            </div>
+        </div>
+    </div>
+    <div class="card z-depth-0 bordered">
+        <div class="card-header" id="headingFive">
+            <h5 class="mb-0">
+                <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                        data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                    Idiomas
+                </button>
+            </h5>
+        </div>
+        <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
+            <div class="card-body">
+                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3
+                wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum
+                eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla
+                assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred
+                nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer
+                farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus
+                labore sustainable.
+            </div>
+        </div>
+    </div>
+    <div class="card z-depth-0 bordered">
+        <div class="card-header" id="headingSix">
+            <h5 class="mb-0">
+                <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                        data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                    Situacion laboral
+                </button>
+            </h5>
+        </div>
+        <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordionExample">
+            <div class="card-body">
+                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3
+                wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum
+                eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla
+                assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred
+                nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer
+                farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus
+                labore sustainable.
+            </div>
+        </div>
+    </div>
+</div>
