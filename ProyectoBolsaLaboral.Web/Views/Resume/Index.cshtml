@@ -43,14 +43,14 @@
                         <div class="col-sm-3">Tengo estudios superiores</div>
                         <div class="col-sm-9">
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="gridCheck1">
+                                <input class="form-check-input" type="checkbox" id="check_estudios">
                             </div>
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="inputInstruccion" class="col-sm-3 col-form-label">Grado de instruccion</label>
                         <div class="col-sm-9">
-                            <select class="form-control" id="inputInstruccion">
+                            <select class="form-control" id="inputInstruccion" disabled>
                                 <option value="" disabled selected hidden>(Indicar nivel de estudios)</option>
                                 <option value="Primaria">Primaria</option>
                                 <option value="Secundaria">Secundaria</option>
@@ -63,42 +63,42 @@
                     <div class="form-group row">
                         <label for="inputEspecialidad" class="col-sm-3 col-form-label">Especialidad</label>
                         <div class="col-sm-9">
-                            <select class="form-control" id="inputEspecialidad">
+                            <select class="form-control" id="inputEspecialidad" disabled>
                                 <option value="" disabled selected hidden>(Indicar especialidad)</option>
                                 <!-- TODO se llena de la base de datos-->
                             </select>
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label for="inputDate1" class="col-sm-3 col-form-label">Fecha de inicio</label>
+                        <label for="inputDate_estudio" class="col-sm-3 col-form-label">Fecha de inicio</label>
                         <div class="col-sm-3 input-group date" data-provide="datepicker">
-                            <input type="text" class="form-control" placeholder="(Indicar fecha de inicio)">
+                            <input type="text" id="inputDate_estudio" class="form-control" placeholder="(Indicar fecha de inicio)" disabled>
                             <div class="input-group-addon">
                                 <span class="glyphicon glyphicon-th"></span>
                             </div>
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label for="inputDate2" class="col-sm-3 col-form-label">Fecha de finalizacion</label>
+                        <label for="inputDate_estudio_fin" class="col-sm-3 col-form-label">Fecha de finalizacion</label>
                         <div class="col-sm-3 input-group date" data-provide="datepicker">
-                            <input type="text" class="form-control" placeholder="(Indicar fecha de finalizacion)">
+                            <input type="text" id="inputDate_estudio_fin" class="form-control" placeholder="(Indicar fecha de finalizacion)" disabled>
                             <div class="input-group-addon">
                                 <span class="glyphicon glyphicon-th"></span>
                             </div>
                         </div>
                         <div class="col-sm-6">
                             <div class="form-check">
-                                <label class="form-check-label pr-5" for="gridCheck2">
+                                <label class="form-check-label pr-5" for="check_fecha_estudio">
                                     Aun no finalizo
                                 </label>
-                                <input class="form-check-input" type="checkbox" id="gridCheck2">
+                                <input class="form-check-input" type="checkbox" id="check_fecha_estudio" disabled>
                             </div>
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="inputIES" class="col-sm-3 col-form-label">Centro de estudios</label>
                         <div class="col-sm-9">
-                            <input class="form-control" if="inputIES" type="text" placeholder="(Indicar centro de estudios)">
+                            <input class="form-control" id="inputIES" type="text" placeholder="(Indicar centro de estudios)" disabled>
                         </div>
                     </div>
                     <div class="form-group row">
@@ -133,13 +133,13 @@
                     <div class="form-group row">
                         <label for="inputLaboral" class="col-sm-3 col-form-label">Puesto laboral</label>
                         <div class="col-sm-9">
-                            <input class="form-control" if="inputLaboral" type="text" placeholder="(Indicar puesto laboral)">
+                            <input class="form-control" id="inputLaboral" type="text" placeholder="(Indicar puesto laboral)">
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="inputEmpresa" class="col-sm-3 col-form-label">Empresa</label>
                         <div class="col-sm-9">
-                            <input class="form-control" if="inputEmpresa" type="text" placeholder="(Indicar empresa)">
+                            <input class="form-control" id="inputEmpresa" type="text" placeholder="(Indicar empresa)">
                         </div>
                     </div>
                     <div class="form-group row">
@@ -281,3 +281,30 @@
         </div>
     </div>
 </div>
+
+
+<script>
+    $(document).ready(function () {
+        $("#check_estudios").change(function () {
+            if (this.checked) {
+                $("#inputInstruccion").prop("disabled", false);
+                $("#inputEspecialidad").prop("disabled", false);
+                $("#inputInstruccion").prop("disabled", false);
+                $("#inputDate_estudio").prop("disabled", false);
+                $("#inputDate_estudio_fin").prop("disabled", false);
+                $("#check_fecha_estudio").prop("disabled", false);
+                $("#inputIES").prop("disabled", false);
+            }
+            else
+            {
+                $("#inputInstruccion").prop("disabled", true);
+                $("#inputEspecialidad").prop("disabled", true);
+                $("#inputInstruccion").prop("disabled", true);
+                $("#inputDate_estudio").prop("disabled", true);
+                $("#inputDate_estudio_fin").prop("disabled", true);
+                $("#check_fecha_estudio").prop("disabled", true);
+                $("#inputIES").prop("disabled", true);
+            }
+        });
+    });
+</script>
