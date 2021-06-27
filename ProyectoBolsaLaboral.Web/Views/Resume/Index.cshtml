@@ -81,7 +81,7 @@
                     <div class="form-group row">
                         <label for="inputDate2" class="col-sm-3 col-form-label">Fecha de finalizacion</label>
                         <div class="col-sm-3 input-group date" data-provide="datepicker">
-                            <input type="text" class="form-control" placeholder="(Indicar fecha de inicio)">
+                            <input type="text" class="form-control" placeholder="(Indicar fecha de finalizacion)">
                             <div class="input-group-addon">
                                 <span class="glyphicon glyphicon-th"></span>
                             </div>
@@ -121,13 +121,68 @@
         </div>
         <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
             <div class="card-body">
-                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3
-                wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum
-                eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla
-                assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred
-                nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer
-                farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus
-                labore sustainable.
+                <form>
+                    <div class="form-group row">
+                        <div class="col-sm-3">Tengo experiencia laboral</div>
+                        <div class="col-sm-9">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="inputLaboral" class="col-sm-3 col-form-label">Puesto laboral</label>
+                        <div class="col-sm-9">
+                            <input class="form-control" if="inputLaboral" type="text" placeholder="(Indicar puesto laboral)">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="inputEmpresa" class="col-sm-3 col-form-label">Empresa</label>
+                        <div class="col-sm-9">
+                            <input class="form-control" if="inputEmpresa" type="text" placeholder="(Indicar empresa)">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="inputDateWork1" class="col-sm-3 col-form-label">Fecha de inicio</label>
+                        <div class="col-sm-3 input-group date" data-provide="datepicker">
+                            <input type="text" class="form-control" placeholder="(Indicar fecha de inicio)">
+                            <div class="input-group-addon">
+                                <span class="glyphicon glyphicon-th"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="inputDateWork1" class="col-sm-3 col-form-label">Fecha de salida</label>
+                        <div class="col-sm-3 input-group date" data-provide="datepicker">
+                            <input type="text" class="form-control" placeholder="(Indicar fecha de salida)">
+                            <div class="input-group-addon">
+                                <span class="glyphicon glyphicon-th"></span>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-check">
+                                <label class="form-check-label pr-5" for="check_work">
+                                    Sigo trabajando aquí
+                                </label>
+                                <input class="form-check-input" type="checkbox" id="check_work">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="inputNivel" class="col-sm-3 col-form-label">Nivel de experiencia</label>
+                        <div class="col-sm-9">
+                            <select class="form-control" id="inputNivel">
+                                <option value="" disabled selected hidden>(Indicar nivel de experiencia)</option>
+                                <!-- TODO se llena de la base de datos-->
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-sm-10 pt-2">
+                            <button type="submit" class="btn btn-primary">Guardar</button>
+                        </div>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
@@ -142,13 +197,65 @@
         </div>
         <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
             <div class="card-body">
-                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3
-                wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum
-                eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla
-                assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred
-                nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer
-                farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus
-                labore sustainable.
+                <form>
+                    <fieldset class="form-group">
+                        <div class="row">
+                            <legend class="col-form-label col-sm-3 pt-0">Tengo conocimiento del idioma ingles</legend>
+                            <div class="col-sm-9">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+                                    <label class="form-check-label" for="gridRadios1">
+                                        Sí
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+                                    <label class="form-check-label" for="gridRadios2">
+                                        No
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <div class="form-group row">
+                        <label for="inputNivelIngles" class="col-sm-3 col-form-label">Nivel de inglés</label>
+                        <div class="col-sm-9">
+                            <select class="form-control" id="inputNivelIngles">
+                                <option value="" disabled selected hidden>(Indicar nivel de inglés)</option>
+                                <option value="Básico">Primaria</option>
+                                <option value="Intermedio">Secundaria</option>
+                                <option value="Avanzado">Superior</option>
+                                <option value="Nativo">Master</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-sm-3">Certificación internacional</div>
+                        <div class="col-sm-1">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="inputCertificado" class="col-sm-3 col-form-label">Examen internacional</label>
+                        <div class="col-sm-9">
+                            <select class="form-control" id="inputCertificado">
+                                <option value="" disabled selected hidden>(Indicar examen internacional)</option>
+                                <option value="TOEFL">TOEFL</option>
+                                <option value="TOEIC">TOEIC</option>
+                                <option value="IELTS">IELTS</option>
+                                <option value="CAE">CAE</option>
+                                <option value="Otros">Otros</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-sm-10 pt-2">
+                            <button type="submit" class="btn btn-primary">Guardar</button>
+                        </div>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
