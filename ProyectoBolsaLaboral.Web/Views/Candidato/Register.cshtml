@@ -1,1 +1,162 @@
-﻿
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"]Registro de Candidato</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link href="~/Tu_Nuevo_Trabajo.ico" rel="icon" />
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light mb-3 mt-2 mr-5 ml-5">
+            <div class="container">
+                <div class="row">
+                    <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index" style="font-size:30px;">Tu Nuevo Trabajo</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container-fluid justify-content-center col-4" style="border:groove; padding: 40px; margin-bottom: 100px;">
+        <div class="row justify-content-center" style="margin-bottom:25px;">
+            <h3 class="justify-content-center">Registro de Candidato</h3>
+        </div>
+        <form>
+            <div class="form-row">
+                <div class="col-md-6 mb-3">
+                    <label for="nomCand">Nombres</label>
+                    <input type="text" class="form-control" id="nomCand" value="" required>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="apeCand">Apellidos</label>
+                    <input type="text" class="form-control" id="apeCand" value="" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-md-6 mb-3">
+                    <label for="emailCand">Correo Electrónico</label>
+                    <input type="email" class="form-control" id="emailCand" value="" required>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="passCand">Contraseña</label>
+                    <input type="password" class="form-control" id="passCand" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-md-8 mb-3 date" data-provide="datepicker">
+                    <label for="birthCand">Fecha de Nacimiento</label>
+                    <input type="text" id="birthCand" class="form-control" placeholder="Indicar fecha de Nacimiento">
+                    <div class="input-group-addon">
+                        <span class="glyphicon glyphicon-th"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-8 mb-3">
+                    <div class="row col-md-6">
+                        <label for="">Género</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="rbMascCand" value="option1">
+                        <label class="form-check-label" for="rbMascCand">Masculino</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="rbFemCand" value="option2">
+                        <label class="form-check-label" for="rbFemCand">Femenino</label>
+                    </div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-md-6 mb-3">
+                    <label for="telefCand">Teléfono</label>
+                    <input type="text" class="form-control" id="telefCand" value="" required>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="zipCand">Código Postal</label>
+                    <input type="text" class="form-control" id="zipCand" value="" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-md-6 mb-3">
+                    <label for="validationDefault04">Departamento</label>
+                    <select class="custom-select" id="validationDefault04" required>
+                        <option selected disabled value="">Choose...</option>
+                        <option>...</option>
+                    </select>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="validationDefault05">Provincia</label>
+                    <select class="custom-select" id="validationDefault05" required>
+                        <option selected disabled value="">Choose...</option>
+                        <option>...</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-10 mb-3">
+                    <div class="row col-md-10">
+                        <label for="">Tienes Estudios?</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="siEst" value="option1">
+                        <label class="form-check-label" for="siEst">Si</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="noEst" value="option2">
+                        <label class="form-check-label" for="noEst">No</label>
+                    </div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-10 mb-3">
+                    <div class="row col-md-10">
+                        <label for="">Has trabajado antes?</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="siTrab" value="option1">
+                        <label class="form-check-label" for="siTrab">Si</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="noTrab" value="option2">
+                        <label class="form-check-label" for="noTrab">No</label>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>
+                    <label class="form-check-label" for="invalidCheck2">
+                        Estoy de acuerdo con los términos y condiciones
+                    </label>
+                </div>
+            </div>
+            <button class="btn btn-primary mb-5" type="submit">Registrar</button>
+        </form>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" asp-controller="Candidato" asp-action="index">¿Ya tienes una cuenta? ¡Ingresa!</a>
+    </div>
+    <footer class="footer fixed-bottom">
+        <div class="text-center p-2" style="background-color: rgba(0, 0, 0, 0.05);">
+            © 2021 Copyright:
+            <a class="text-reset fw-bold" asp-controller="Home" asp-action="Index">Tu nuevo trabajo</a>
+        </div>
+    </footer>
+
+    <!-- datepicker -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css" />
+    <!-- datepicker -->
+
+</body>
+</html>
