@@ -17,16 +17,11 @@
         <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
              data-parent="#accordionExample">
             <div class="card-body">
-                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3
-                wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum
-                eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla
-                assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred
-                nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer
-                farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus
-                labore sustainable.
+                De la base de datos
             </div>
         </div>
     </div>
+    <!-- CAMPO DE ESTUDIOS -->
     <div class="card z-depth-0 bordered">
         <div class="card-header" id="headingTwo">
             <h5 class="mb-0">
@@ -43,14 +38,14 @@
                         <div class="col-sm-3">Tengo estudios superiores</div>
                         <div class="col-sm-9">
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="gridCheck1">
+                                <input class="form-check-input" type="checkbox" id="check_estudios">
                             </div>
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="inputInstruccion" class="col-sm-3 col-form-label">Grado de instruccion</label>
                         <div class="col-sm-9">
-                            <select class="form-control" id="inputInstruccion">
+                            <select class="form-control" id="inputInstruccion" disabled>
                                 <option value="" disabled selected hidden>(Indicar nivel de estudios)</option>
                                 <option value="Primaria">Primaria</option>
                                 <option value="Secundaria">Secundaria</option>
@@ -63,42 +58,42 @@
                     <div class="form-group row">
                         <label for="inputEspecialidad" class="col-sm-3 col-form-label">Especialidad</label>
                         <div class="col-sm-9">
-                            <select class="form-control" id="inputEspecialidad">
+                            <select class="form-control" id="inputEspecialidad" disabled>
                                 <option value="" disabled selected hidden>(Indicar especialidad)</option>
                                 <!-- TODO se llena de la base de datos-->
                             </select>
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label for="inputDate1" class="col-sm-3 col-form-label">Fecha de inicio</label>
+                        <label for="inputDate_estudio" class="col-sm-3 col-form-label">Fecha de inicio</label>
                         <div class="col-sm-3 input-group date" data-provide="datepicker">
-                            <input type="text" class="form-control" placeholder="(Indicar fecha de inicio)">
+                            <input type="text" id="inputDate_estudio" class="form-control" placeholder="(Indicar fecha de inicio)" disabled>
                             <div class="input-group-addon">
                                 <span class="glyphicon glyphicon-th"></span>
                             </div>
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label for="inputDate2" class="col-sm-3 col-form-label">Fecha de finalizacion</label>
+                        <label for="inputDate_estudio_fin" class="col-sm-3 col-form-label">Fecha de finalizacion</label>
                         <div class="col-sm-3 input-group date" data-provide="datepicker">
-                            <input type="text" class="form-control" placeholder="(Indicar fecha de finalizacion)">
+                            <input type="text" id="inputDate_estudio_fin" class="form-control" placeholder="(Indicar fecha de finalizacion)" disabled>
                             <div class="input-group-addon">
                                 <span class="glyphicon glyphicon-th"></span>
                             </div>
                         </div>
                         <div class="col-sm-6">
                             <div class="form-check">
-                                <label class="form-check-label pr-5" for="gridCheck2">
+                                <label class="form-check-label pr-5" for="check_fecha_estudio">
                                     Aun no finalizo
                                 </label>
-                                <input class="form-check-input" type="checkbox" id="gridCheck2">
+                                <input class="form-check-input" type="checkbox" id="check_fecha_estudio" disabled>
                             </div>
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="inputIES" class="col-sm-3 col-form-label">Centro de estudios</label>
                         <div class="col-sm-9">
-                            <input class="form-control" if="inputIES" type="text" placeholder="(Indicar centro de estudios)">
+                            <input class="form-control" id="inputIES" type="text" placeholder="(Indicar centro de estudios)" disabled>
                         </div>
                     </div>
                     <div class="form-group row">
@@ -110,6 +105,8 @@
             </div>
         </div>
     </div>
+    <!-- FIN CAMPO DE ESTUDIOS -->
+    <!-- INICIO CAMPO DE EXPERIENCIA -->
     <div class="card z-depth-0 bordered">
         <div class="card-header" id="headingThree">
             <h5 class="mb-0">
@@ -126,26 +123,26 @@
                         <div class="col-sm-3">Tengo experiencia laboral</div>
                         <div class="col-sm-9">
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="">
+                                <input class="form-check-input" type="checkbox" id="check_experiencia">
                             </div>
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="inputLaboral" class="col-sm-3 col-form-label">Puesto laboral</label>
                         <div class="col-sm-9">
-                            <input class="form-control" if="inputLaboral" type="text" placeholder="(Indicar puesto laboral)">
+                            <input class="form-control" id="inputLaboral" type="text" placeholder="(Indicar puesto laboral)" disabled>
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label for="inputEmpresa" class="col-sm-3 col-form-label">Empresa</label>
+                        <label for="inputEmpresa" class="col-sm-3 col-form-label">Empresa o institución</label>
                         <div class="col-sm-9">
-                            <input class="form-control" if="inputEmpresa" type="text" placeholder="(Indicar empresa)">
+                            <input class="form-control" id="inputEmpresa" type="text" placeholder="(Indicar lugar de trabajo)" disabled>
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="inputDateWork1" class="col-sm-3 col-form-label">Fecha de inicio</label>
                         <div class="col-sm-3 input-group date" data-provide="datepicker">
-                            <input type="text" class="form-control" placeholder="(Indicar fecha de inicio)">
+                            <input type="text" id="fecha_inicio_trabajo" class="form-control" placeholder="(Indicar fecha de inicio)" disabled>
                             <div class="input-group-addon">
                                 <span class="glyphicon glyphicon-th"></span>
                             </div>
@@ -154,24 +151,24 @@
                     <div class="form-group row">
                         <label for="inputDateWork1" class="col-sm-3 col-form-label">Fecha de salida</label>
                         <div class="col-sm-3 input-group date" data-provide="datepicker">
-                            <input type="text" class="form-control" placeholder="(Indicar fecha de salida)">
+                            <input type="text" id="fecha_fin_trabajo" class="form-control" placeholder="(Indicar fecha de salida)" disabled>
                             <div class="input-group-addon">
                                 <span class="glyphicon glyphicon-th"></span>
                             </div>
                         </div>
                         <div class="col-sm-6">
                             <div class="form-check">
-                                <label class="form-check-label pr-5" for="check_work">
+                                <label class="form-check-label pr-5" for="still_working">
                                     Sigo trabajando aquí
                                 </label>
-                                <input class="form-check-input" type="checkbox" id="check_work">
+                                <input class="form-check-input" id="still_working" type="checkbox" disabled>
                             </div>
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="inputNivel" class="col-sm-3 col-form-label">Nivel de experiencia</label>
                         <div class="col-sm-9">
-                            <select class="form-control" id="inputNivel">
+                            <select class="form-control" id="inputNivel" disabled>
                                 <option value="" disabled selected hidden>(Indicar nivel de experiencia)</option>
                                 <!-- TODO se llena de la base de datos-->
                             </select>
@@ -186,6 +183,8 @@
             </div>
         </div>
     </div>
+    <!-- FIN CAMPO DE EXPERIENCIA -->
+    <!-- INICIO CAMPO DE IDIOMA -->
     <div class="card z-depth-0 bordered">
         <div class="card-header" id="headingFive">
             <h5 class="mb-0">
@@ -203,14 +202,14 @@
                             <legend class="col-form-label col-sm-3 pt-0">Tengo conocimiento del idioma ingles</legend>
                             <div class="col-sm-9">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
-                                    <label class="form-check-label" for="gridRadios1">
+                                    <input class="form-check-input" type="radio" name="gridIngles" id="radio_ingles_yes" value="yes" checked>
+                                    <label class="form-check-label" for="radio_ingles_yes">
                                         Sí
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
-                                    <label class="form-check-label" for="gridRadios2">
+                                    <input class="form-check-input" type="radio" name="gridIngles" id="radio_ingles_no" value="no">
+                                    <label class="form-check-label" for="radio_ingles_no">
                                         No
                                     </label>
                                 </div>
@@ -233,14 +232,14 @@
                         <div class="col-sm-3">Certificación internacional</div>
                         <div class="col-sm-1">
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="">
+                                <input class="form-check-input" type="checkbox" id="check_certificado">
                             </div>
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="inputCertificado" class="col-sm-3 col-form-label">Examen internacional</label>
                         <div class="col-sm-9">
-                            <select class="form-control" id="inputCertificado">
+                            <select class="form-control" id="inputCertificado" disabled>
                                 <option value="" disabled selected hidden>(Indicar examen internacional)</option>
                                 <option value="TOEFL">TOEFL</option>
                                 <option value="TOEIC">TOEIC</option>
@@ -259,6 +258,8 @@
             </div>
         </div>
     </div>
+    <!-- FIN CAMPO DE IDIOMA -->
+    <!-- INICIO CAMPO DE SITUACION LABORAL -->
     <div class="card z-depth-0 bordered">
         <div class="card-header" id="headingSix">
             <h5 class="mb-0">
@@ -270,14 +271,180 @@
         </div>
         <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordionExample">
             <div class="card-body">
-                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3
-                wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum
-                eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla
-                assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred
-                nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer
-                farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus
-                labore sustainable.
+                <fieldset class="form-group">
+                    <div class="row">
+                        <legend class="col-form-label col-sm-3 pt-0">Trabajas actualmente? (informal o formal)</legend>
+                        <div class="col-sm-9">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="gridTrabajo" id="" value="no" checked>
+                                <label class="form-check-label" for="">
+                                    No
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="gridTrabajo" id="" value="yes">
+                                <label class="form-check-label" for="">
+                                    Sí
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+                <fieldset class="form-group">
+                    <div class="row">
+                        <legend class="col-form-label col-sm-3 pt-0">Estás buscando trabajo?</legend>
+                        <div class="col-sm-9">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="gridBuscaTrabajo" id="" value="no" checked>
+                                <label class="form-check-label" for="">
+                                    No me interesa ni busco trabajo
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="gridBuscaTrabajo" id="" value="yes">
+                                <label class="form-check-label" for="">
+                                    Sí, estoy buscando y dispuesto a escuchar propuesta
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+                <div class="form-group row">
+                    <label for="inputAnioExperiencia" class="col-sm-3 col-form-label">Anios de experiencia en total</label>
+                    <div class="col-sm-9">
+                        <select class="form-control" id="inputAnioExperiencia">
+                            <option value="" disabled selected hidden>(Indicar)</option>
+                            <option value="menos_uno">Menos de 1</option>
+                            <option value="entre_uno_tres">Entre 1 a 3</option>
+                            <option value="entre_3_5">Entre 3 a 5</option>
+                            <option value="mas_5">Mas de 5</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="inputTrabajoPreferido" class="col-sm-3 col-form-label">Que puesto preferirias?</label>
+                    <div class="col-sm-9">
+                        <input class="form-control" id="inputTrabajoPreferido" type="text" placeholder="(Indicar)">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="inputMotivacion" class="col-sm-3 col-form-label">Objetivos y motivaciones laborales</label>
+                    <div class="col-sm-9">
+                        <textarea class="form-control" id="inputMotivacion" rows="4" placeholder="(Máximo 250 caracteres)"></textarea>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
+    <!-- FIN CAMPO DE SITUACION LABORAL -->
 </div>
+
+
+<script>
+    $(document).ready(function () {
+        $("#check_estudios").change(function () {
+            if (this.checked) {
+                $("#inputInstruccion").prop("disabled", false);
+                $("#inputEspecialidad").prop("disabled", false);
+                $("#inputInstruccion").prop("disabled", false);
+                $("#inputDate_estudio").prop("disabled", false);
+                $("#inputDate_estudio_fin").prop("disabled", false);
+                $("#check_fecha_estudio").prop("disabled", false);
+                $("#inputIES").prop("disabled", false);
+            }
+            else
+            {
+                $("#inputInstruccion").prop("disabled", true);
+                $("#inputEspecialidad").prop("disabled", true);
+                $("#inputInstruccion").prop("disabled", true);
+                $("#inputDate_estudio").prop("disabled", true);
+                $("#inputDate_estudio_fin").prop("disabled", true);
+                $("#check_fecha_estudio").prop("disabled", true);
+                $("#inputIES").prop("disabled", true);
+            }
+
+            // Verify if after changing the state of the checkbox, the
+            // fecha_fin field is still enabled or disabled according to the
+            // checkbox status.
+
+            // If after a change in the checkbox status the fecha_fin field
+            // remained checked, then keep disabled the fecha fin field. 
+            if ($("#check_fecha_estudio").is(":checked")) {
+                $("#inputDate_estudio_fin").prop("disabled", true);
+            }
+
+        });
+
+        $("#check_fecha_estudio").change(function () {
+            if (this.checked) {
+                $("#inputDate_estudio_fin").prop("disabled", true);
+            }
+            else {
+                $("#inputDate_estudio_fin").prop("disabled", false);
+            }
+        });
+
+
+
+        $("#check_experiencia").change(function () {
+            if (this.checked) {
+                $("#inputLaboral").prop("disabled", false);
+                $("#inputEmpresa").prop("disabled", false);
+                $("#fecha_inicio_trabajo").prop("disabled", false);
+                $("#fecha_fin_trabajo").prop("disabled", false);
+                $("#still_working").prop("disabled", false);
+                $("#inputNivel").prop("disabled", false);
+            }
+            else {
+                $("#inputLaboral").prop("disabled", true);
+                $("#inputEmpresa").prop("disabled", true);
+                $("#fecha_inicio_trabajo").prop("disabled", true);
+                $("#fecha_fin_trabajo").prop("disabled", true);
+                $("#still_working").prop("disabled", true);
+                $("#inputNivel").prop("disabled", true);
+            }
+
+            if ($("#still_working").is(":checked")) {
+                $("#fecha_fin_trabajo").prop("disabled", true);
+            }
+        });
+
+        $("#still_working").change(function () {
+            if (this.checked) {
+                $("#fecha_fin_trabajo").prop("disabled", true);
+            }
+            else {
+                $("#fecha_fin_trabajo").prop("disabled", false);
+            }
+        });
+
+        $('input:radio[name="gridIngles"]').change(function () {
+            if ($(this).is(":checked") && $(this).val() == "yes") {
+                $("#inputNivelIngles").prop("disabled", false);
+                $("#check_certificado").prop("disabled", false);
+
+                if ($("#check_certificado").is(":checked")) {
+                    $("#inputCertificado").prop("disabled", false);
+                }
+            }
+            else {
+                if ($(this).is(":checked") && $(this).val() == "no") {
+                    $("#inputNivelIngles").prop("disabled", true);
+                    $("#check_certificado").prop("disabled", true);
+                    $("#inputCertificado").prop("disabled", true);
+                }
+            }
+
+
+        });
+
+        $("#check_certificado").change(function () {
+            if ($(this).is(":checked")) {
+                $("#inputCertificado").prop("disabled", false);
+            }
+            else {
+                $("#inputCertificado").prop("disabled", true);
+            }
+        });
+    });
+</script>
