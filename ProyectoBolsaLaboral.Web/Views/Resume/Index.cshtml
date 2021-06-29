@@ -17,13 +17,7 @@
         <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
              data-parent="#accordionExample">
             <div class="card-body">
-                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3
-                wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum
-                eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla
-                assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred
-                nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer
-                farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus
-                labore sustainable.
+                De la base de datos
             </div>
         </div>
     </div>
@@ -164,10 +158,10 @@
                         </div>
                         <div class="col-sm-6">
                             <div class="form-check">
-                                <label class="form-check-label pr-5" for="check_work">
+                                <label class="form-check-label pr-5" for="still_working">
                                     Sigo trabajando aquí
                                 </label>
-                                <input class="form-check-input" id="still_working" type="checkbox" id="check_work" disabled>
+                                <input class="form-check-input" id="still_working" type="checkbox" disabled>
                             </div>
                         </div>
                     </div>
@@ -208,14 +202,14 @@
                             <legend class="col-form-label col-sm-3 pt-0">Tengo conocimiento del idioma ingles</legend>
                             <div class="col-sm-9">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
-                                    <label class="form-check-label" for="gridRadios1">
+                                    <input class="form-check-input" type="radio" name="gridIngles" id="radio_ingles_yes" value="yes" checked>
+                                    <label class="form-check-label" for="radio_ingles_yes">
                                         Sí
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
-                                    <label class="form-check-label" for="gridRadios2">
+                                    <input class="form-check-input" type="radio" name="gridIngles" id="radio_ingles_no" value="no">
+                                    <label class="form-check-label" for="radio_ingles_no">
                                         No
                                     </label>
                                 </div>
@@ -238,14 +232,14 @@
                         <div class="col-sm-3">Certificación internacional</div>
                         <div class="col-sm-1">
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="">
+                                <input class="form-check-input" type="checkbox" id="check_certificado">
                             </div>
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="inputCertificado" class="col-sm-3 col-form-label">Examen internacional</label>
                         <div class="col-sm-9">
-                            <select class="form-control" id="inputCertificado">
+                            <select class="form-control" id="inputCertificado" disabled>
                                 <option value="" disabled selected hidden>(Indicar examen internacional)</option>
                                 <option value="TOEFL">TOEFL</option>
                                 <option value="TOEIC">TOEIC</option>
@@ -277,13 +271,68 @@
         </div>
         <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordionExample">
             <div class="card-body">
-                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3
-                wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum
-                eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla
-                assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred
-                nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer
-                farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus
-                labore sustainable.
+                <fieldset class="form-group">
+                    <div class="row">
+                        <legend class="col-form-label col-sm-3 pt-0">Trabajas actualmente? (informal o formal)</legend>
+                        <div class="col-sm-9">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="gridTrabajo" id="" value="no" checked>
+                                <label class="form-check-label" for="">
+                                    No
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="gridTrabajo" id="" value="yes">
+                                <label class="form-check-label" for="">
+                                    Sí
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+                <fieldset class="form-group">
+                    <div class="row">
+                        <legend class="col-form-label col-sm-3 pt-0">Estás buscando trabajo?</legend>
+                        <div class="col-sm-9">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="gridBuscaTrabajo" id="" value="no" checked>
+                                <label class="form-check-label" for="">
+                                    No me interesa ni busco trabajo
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="gridBuscaTrabajo" id="" value="yes">
+                                <label class="form-check-label" for="">
+                                    Sí, estoy buscando y dispuesto a escuchar propuesta
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+                <div class="form-group row">
+                    <label for="inputAnioExperiencia" class="col-sm-3 col-form-label">Anios de experiencia en total</label>
+                    <div class="col-sm-9">
+                        <select class="form-control" id="inputAnioExperiencia">
+                            <option value="" disabled selected hidden>(Indicar)</option>
+                            <option value="menos_uno">Menos de 1</option>
+                            <option value="entre_uno_tres">Entre 1 a 3</option>
+                            <option value="entre_3_5">Entre 3 a 5</option>
+                            <option value="mas_5">Mas de 5</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="inputTrabajoPreferido" class="col-sm-3 col-form-label">Que puesto preferirias?</label>
+                    <div class="col-sm-9">
+                        <input class="form-control" id="inputTrabajoPreferido" type="text" placeholder="(Indicar)">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="inputMotivacion" class="col-sm-3 col-form-label">Objetivos y motivaciones laborales</label>
+                    <div class="col-sm-9">
+                        <textarea class="form-control" id="inputMotivacion" rows="4" placeholder="(Máximo 250 caracteres)"></textarea>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -353,6 +402,48 @@
                 $("#fecha_fin_trabajo").prop("disabled", true);
                 $("#still_working").prop("disabled", true);
                 $("#inputNivel").prop("disabled", true);
+            }
+
+            if ($("#still_working").is(":checked")) {
+                $("#fecha_fin_trabajo").prop("disabled", true);
+            }
+        });
+
+        $("#still_working").change(function () {
+            if (this.checked) {
+                $("#fecha_fin_trabajo").prop("disabled", true);
+            }
+            else {
+                $("#fecha_fin_trabajo").prop("disabled", false);
+            }
+        });
+
+        $('input:radio[name="gridIngles"]').change(function () {
+            if ($(this).is(":checked") && $(this).val() == "yes") {
+                $("#inputNivelIngles").prop("disabled", false);
+                $("#check_certificado").prop("disabled", false);
+
+                if ($("#check_certificado").is(":checked")) {
+                    $("#inputCertificado").prop("disabled", false);
+                }
+            }
+            else {
+                if ($(this).is(":checked") && $(this).val() == "no") {
+                    $("#inputNivelIngles").prop("disabled", true);
+                    $("#check_certificado").prop("disabled", true);
+                    $("#inputCertificado").prop("disabled", true);
+                }
+            }
+
+
+        });
+
+        $("#check_certificado").change(function () {
+            if ($(this).is(":checked")) {
+                $("#inputCertificado").prop("disabled", false);
+            }
+            else {
+                $("#inputCertificado").prop("disabled", true);
             }
         });
     });
