@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"]Ingreso de Empresa</title>
+    <title>@ViewData["Title"]Ingreso de Candidato</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
     <link href="~/Tu_Nuevo_Trabajo.ico" rel="icon" />
@@ -28,16 +28,15 @@
         </nav>
     </header>
 
-    <div class="container-fluid justify-content-center col-4">
-        @*<div class="row">*@
+    <div class="container-fluid justify-content-center col-4" style="border:groove; padding: 40px;margin-bottom:100px;">
         <div class="row justify-content-center" style="margin-bottom:25px;">
-            <h3 class="justify-content-center">Ingreso de Empresa</h3>
+            <h3 class="justify-content-center">Ingreso de Candidato</h3>
         </div>
         <form>
             <div class="form-group">
                 <label for="validationEmail">Correo Electrónico</label>
                 <input type="email" class="form-control" id="validationEmail" aria-describedby="emailHelp" required>
-                <small id="emailHelp" class="form-text text-muted"></small>
+                <small id="emailHelp" class="form-text text-muted">Nunca compartiremos tu e-mail con nadie.</small>
 
             </div>
             <div class="form-group">
@@ -53,15 +52,29 @@
         </form>
         @*</div>*@
         <div class="dropdown-divider"></div>
-        <a class="dropdown-item" href="RegistroEmpresa">¿Nuevo por aqui? ¡Regístrate!</a>
+        <a class="dropdown-item" asp-controller="Empresa" asp-action="RegistroEmpresa">¿Nuevo por aqui? ¡Regístrate!</a>
     </div>
+    <!-- fecha -->
+    <!--<div class="col-sm-3 input-group date" data-provide="datepicker">
+        <input type="text" id="" class="form-control" placeholder="(Indicar fecha de finalizacion)">
+        <div class="input-group-addon">
+            <span class="glyphicon glyphicon-th"></span>
+        </div>
+    </div>-->
+    <!-- fecha -->
+
 
     <footer class="footer">
         <div class="text-center p-2" style="background-color: rgba(0, 0, 0, 0.05);">
             © 2021 Copyright:
-            <a class="text-reset fw-bold" href="https://mdbootstrap.com/">Tu nuevo trabajo</a>
+            <a class="text-reset fw-bold" asp-controller="Home" asp-action="Index">Tu nuevo trabajo</a>
         </div>
     </footer>
+
+    <!-- datepicker -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css" />
+    <!-- datepicker -->
 
 </body>
 </html>

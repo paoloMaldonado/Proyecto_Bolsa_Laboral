@@ -12,5 +12,9 @@ namespace ProyectoBolsaLaboral.Web.Controllers
         {
             return PartialView();
         }
+        public IActionResult RegistroEmpresa()
+        {
+            return PartialView();
+        }
     }
 }

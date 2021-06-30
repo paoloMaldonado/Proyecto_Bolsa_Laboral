@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"]Ingreso de Empresa</title>
+    <title>@ViewData["Title"]Registro de Candidato</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
     <link href="~/Tu_Nuevo_Trabajo.ico" rel="icon" />
@@ -28,40 +28,173 @@
         </nav>
     </header>
 
-    <div class="container-fluid justify-content-center col-4">
-        @*<div class="row">*@
+    <div class="container-fluid justify-content-center col-8" style="border:groove; padding: 40px; margin-bottom: 100px;">
         <div class="row justify-content-center" style="margin-bottom:25px;">
-            <h3 class="justify-content-center">Ingreso de Empresa</h3>
+            <h3 class="justify-content-center">Registro de Empresa</h3>
         </div>
+        <hr />
         <form>
-            <div class="form-group">
-                <label for="validationEmail">Correo Electrónico</label>
-                <input type="email" class="form-control" id="validationEmail" aria-describedby="emailHelp" required>
-                <small id="emailHelp" class="form-text text-muted"></small>
+            <div class="form-row" style="padding-left:10px">
+                <h4><label>Datos de acceso</label></h4>
+            </div>
+            <div class="form-row">
+                <div class="col-md-6 mb-3">
+                    <label for="emailCand">Correo Electrónico</label>
+                    <input type="email" class="form-control" id="emailCand" value="" required>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="passCand">Contraseña</label>
+                    <input type="password" class="form-control" id="passCand" required>
+                </div>
+            </div>
+            <div class="form-row" style="padding-left:10px">
+                <h4><label>Datos de la Empresa</label></h4>
+            </div>
+            <div class="form-row">
+                <div class="col-md-6 mb-3">
+                    <label for="nomCand">Nombre Comercial de la Empresa</label>
+                    <input type="text" class="form-control" id="nomCand" value="" required>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="apeCand">RUC</label>
+                    <input type="text" class="form-control" id="apeCand" value="" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-md-8 mb-3">
+                    <label for="direcEmp">Direccion</label>
+                    <input type="text" id="direcEmp" class="form-control" placeholder="">
 
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-md-4 mb-3">
+                    <label for="DepEmp">Departamento</label>
+                    <select class="custom-select" id="DepEmp" required>
+                        <option selected disabled value="">Choose...</option>
+                        <option>...</option>
+                    </select>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label for="ProvEmp">Provincia</label>
+                    <select class="custom-select" id="ProvEmp" required>
+                        <option selected disabled value="">Choose...</option>
+                        <option>...</option>
+                    </select>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label for="DistEmp">Distrito</label>
+                    <select class="custom-select" id="DistEmp" required>
+                        <option selected disabled value="">Choose...</option>
+                        <option>...</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-md-4 mb-3">
+                    <label for="secEmp">Sector Empresarial</label>
+                    <select class="custom-select" id="secEmp" required>
+                        <option selected disabled value="">Choose...</option>
+                        <option>...</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-md-12 mb-3">
+                    <label for="desEmp">Descripcion de la Empresa</label>
+                    <input type="text" class="form-control" style="padding-bottom:80px" id="desEmp" value="" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-md-8 mb-3">
+                    <label for="pagWeb">Pagina Web de la Empresa</label>
+                    <input type="text" id="pagWeb" class="form-control" placeholder="">
+
+                </div>
+            </div>
+            <div class="form-row" style="padding-left:10px">
+                <h4><label>Datos de la persona de Contacto</label></h4>
+            </div>
+            <div class="form-row">
+                <div class="col-md-6 mb-3">
+                    <label for="telefCand">Teléfono</label>
+                    <input type="text" class="form-control" id="telefCand" value="" required>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="zipCand">Código Postal</label>
+                    <input type="text" class="form-control" id="zipCand" value="" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-md-6 mb-3">
+                    <label for="validationDefault04">Departamento</label>
+                    <select class="custom-select" id="validationDefault04" required>
+                        <option selected disabled value="">Choose...</option>
+                        <option>...</option>
+                    </select>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="validationDefault05">Provincia</label>
+                    <select class="custom-select" id="validationDefault05" required>
+                        <option selected disabled value="">Choose...</option>
+                        <option>...</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-10 mb-3">
+                    <div class="row col-md-10">
+                        <label for="">Tienes Estudios?</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="siEst" value="option1">
+                        <label class="form-check-label" for="siEst">Si</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="noEst" value="option2">
+                        <label class="form-check-label" for="noEst">No</label>
+                    </div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-10 mb-3">
+                    <div class="row col-md-10">
+                        <label for="">Has trabajado antes?</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="siTrab" value="option1">
+                        <label class="form-check-label" for="siTrab">Si</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="noTrab" value="option2">
+                        <label class="form-check-label" for="noTrab">No</label>
+                    </div>
+                </div>
             </div>
             <div class="form-group">
-                <label for="validationPassword">Contraseña</label>
-                <input type="password" class="form-control" id="validationPassword" required>
-
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>
+                    <label class="form-check-label" for="invalidCheck2">
+                        Estoy de acuerdo con los términos y condiciones
+                    </label>
+                </div>
             </div>
-            <div class="form-group form-check">
-                <input type="checkbox" class="form-check-input" id="RecordCheck">
-                <label class="form-check-label" for="RecordCheck">Recuérdame</label>
-            </div>
-            <button type="submit" class="btn btn-primary">Ingresar</button>
+            <button class="btn btn-primary mb-5" type="submit">Registrar</button>
         </form>
-        @*</div>*@
         <div class="dropdown-divider"></div>
-        <a class="dropdown-item" href="RegistroEmpresa">¿Nuevo por aqui? ¡Regístrate!</a>
+        <a class="dropdown-item" asp-controller="Candidato" asp-action="index">¿Ya tienes una cuenta? ¡Ingresa!</a>
     </div>
-
-    <footer class="footer">
+    <footer class="footer fixed-bottom">
         <div class="text-center p-2" style="background-color: rgba(0, 0, 0, 0.05);">
             © 2021 Copyright:
-            <a class="text-reset fw-bold" href="https://mdbootstrap.com/">Tu nuevo trabajo</a>
+            <a class="text-reset fw-bold" asp-controller="Home" asp-action="Index">Tu nuevo trabajo</a>
         </div>
     </footer>
+
+    <!-- datepicker -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css" />
+    <!-- datepicker -->
 
 </body>
 </html>
