@@ -23,10 +23,7 @@
             <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                 <ul class="navbar-nav flex-grow-1">
                     <li class="nav-item">
-                        <a class="nav-link text-black" asp-area="" asp-controller="Home" asp-action="Index">Buscar Empleo</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-black" asp-area="" asp-controller="Home" asp-action="Privacy">Buscar Empresas</a>
+                        <a class="nav-link text-black" asp-area="" asp-controller="Oferta" asp-action="Index">Buscar Empleo</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-black" asp-area="" asp-controller="Resume" asp-action="Index">Crear CV</a>
@@ -48,7 +45,7 @@
     <footer class="footer">
         <div class="text-center p-2" style="background-color: rgba(0, 0, 0, 0.05);">
             © 2021 Copyright:
-            <a class="text-reset fw-bold" href="https://mdbootstrap.com/">Tu nuevo trabajo</a>
+            <a class="text-reset fw-bold" asp-area="" asp-controller="Home" asp-action="Index">Tu nuevo trabajo</a>
         </div>
     </footer>
 
