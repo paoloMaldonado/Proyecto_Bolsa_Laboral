@@ -1,4 +1,7 @@
-﻿<!DOCTYPE html>
+﻿@Html.Hidden("RedirectTo", Url.Action("LoginUser", "Account"));
+
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -11,7 +14,6 @@
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <style>
-
     </style>
 </head>
 <body>
@@ -49,21 +51,21 @@
                 <input type="checkbox" class="form-check-input" id="RecordCheck">
                 <label class="form-check-label" for="RecordCheck">Recuérdame</label>
             </div>
-            <button type="submit" class="btn btn-primary">Ingresar</button>
+            <button type="submit" class="btn btn-primary" id="btnIngresoCandidato">Ingresar</button>
         </form>
         @*</div>*@
         <div class="dropdown-divider"></div>
         <a class="dropdown-item" asp-controller="Candidato" asp-action="Register">¿Nuevo por aqui? ¡Regístrate!</a>
     </div>
-        <!-- fecha -->
-        <!--<div class="col-sm-3 input-group date" data-provide="datepicker">
-            <input type="text" id="" class="form-control" placeholder="(Indicar fecha de finalizacion)">
-            <div class="input-group-addon">
-                <span class="glyphicon glyphicon-th"></span>
-            </div>
-        </div>-->
-        <!-- fecha -->
-    
+    <!-- fecha -->
+    <!--<div class="col-sm-3 input-group date" data-provide="datepicker">
+        <input type="text" id="" class="form-control" placeholder="(Indicar fecha de finalizacion)">
+        <div class="input-group-addon">
+            <span class="glyphicon glyphicon-th"></span>
+        </div>
+    </div>-->
+    <!-- fecha -->
+
 
     <footer class="footer">
         <div class="text-center p-2" style="background-color: rgba(0, 0, 0, 0.05);">
@@ -76,6 +78,43 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css" />
     <!-- datepicker -->
+
+
+    <script>
+        $("#btnIngresoCandidato").on("click", function () {
+
+            vEmail = $("#validationEmail").val();
+            vPass = $("#validationPassword").val();
+
+
+            $.ajax({
+                type: "GET",
+                url: "Candidato/Validar",
+                cache: false,
+                data: {
+                    email: vEmail,
+                    password: vPass
+                },
+                success: function (response) {
+                    if (response) {
+                        alert("Credentials accepted");
+                        //var url = $("#RedirectTo").val();
+                        //location.href = url;
+                        var url = $("#RedirectTo").val();
+                        location.href = url;
+                    } else {
+                        alert("Check your credentials");
+                    }
+                }
+            });
+
+            alert("Loading...");
+
+        });
+
+
+    </script>
+
 
 </body>
 </html>

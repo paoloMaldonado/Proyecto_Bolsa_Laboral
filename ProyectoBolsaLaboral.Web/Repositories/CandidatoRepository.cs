@@ -41,5 +41,16 @@ namespace ProyectoBolsaLaboral.Web.Repositories
 
             return exito;
         }
+
+        public static async Task<bool> ValidarCredenciales(string email, string password)
+        {
+
+            using var httpClient = new HttpClient();
+            using var response = await httpClient.GetAsync("http://localhost:19112/api/Postulante/GetPostulanteByCredentials/"+email+"/"+password);
+            if (response.IsSuccessStatusCode)
+                return true;
+
+            return false;
+        }
     }
 }

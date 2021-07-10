@@ -15,7 +15,7 @@
 <body>
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light mb-3 mt-2 mx-5">
-            <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Tu Nuevo Trabajo</a>
+            <a class="navbar-brand" asp-area="" asp-controller="User" asp-action="Index">Tu Nuevo Trabajo</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -26,12 +26,14 @@
                         <a class="nav-link text-black" asp-area="" asp-controller="Oferta" asp-action="Index">Buscar Empleo</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-black" asp-area="" asp-controller="Candidato" asp-action="Index">Crear CV</a>
+                        <a class="nav-link text-black" asp-area="" asp-controller="Resume" asp-action="Index">Crear CV</a>
                     </li>
                 </ul>
                 <div>
-                    <a class="btn btn-outline-primary btn-sm" asp-controller="Candidato" asp-action="Index">Acceso candidato</a>
-                    <a class="btn btn-primary btn-sm" asp-controller="Empresa" asp-action="">Acceso empresa</a>
+                    <a class="pr-5">Bienvenido</a>
+                </div>
+                <div>
+                    <a class="btn btn-primary btn-sm" asp-controller="Candidato" asp-action="Index">Cerrar sesión</a>
                 </div>
             </div>
         </nav>
@@ -56,3 +58,4 @@
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
+

@@ -197,18 +197,18 @@
                 },
                 success: function (exito) {
                     if (exito) {
-                        console.log("OK");
+                        alert("Datos registrados");
                         //var url = $("#RedirectTo").val();
                         //location.href = url;
                         //CargarListadoCliente();
                         //$("#modalRegistroCliente").modal("toggle");
                     } else {
-                        console.log("Error");
+                        alert("Hubo un error");
                     }
                 }
             });
 
-            console.log("finishing AJAX")
+            alert("loading...");
 
         });
 

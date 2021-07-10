@@ -1,4 +1,8 @@
-﻿
+﻿@{
+    Layout = "~/Views/Shared/_UserLayout.cshtml";
+}
+
+
 <div class="pb-2">
     <h4>Empieza a crear tu CV</h4>
     <p>Rellena el formulario con la informacion requerida</p>
@@ -352,8 +356,7 @@
                 $("#check_fecha_estudio").prop("disabled", false);
                 $("#inputIES").prop("disabled", false);
             }
-            else
-            {
+            else {
                 $("#inputInstruccion").prop("disabled", true);
                 $("#inputEspecialidad").prop("disabled", true);
                 $("#inputInstruccion").prop("disabled", true);
@@ -368,7 +371,7 @@
             // checkbox status.
 
             // If after a change in the checkbox status the fecha_fin field
-            // remained checked, then keep disabled the fecha fin field. 
+            // remained checked, then keep disabled the fecha fin field.
             if ($("#check_fecha_estudio").is(":checked")) {
                 $("#inputDate_estudio_fin").prop("disabled", true);
             }

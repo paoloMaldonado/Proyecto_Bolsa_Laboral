@@ -15,6 +15,7 @@ namespace ProyectoBolsaLaboral.Web.Controllers
             return PartialView();
         }
 
+
         public IActionResult Register()
         {
             return PartialView();
@@ -50,12 +51,20 @@ namespace ProyectoBolsaLaboral.Web.Controllers
                 TieneEstudio = tieneEstudio,
                 TieneExperiencia = tieneExperiencia,
                 Estado = estado
+
             };
 
             bool exito;
 
             exito = await CandidatoRepository.Insertar(postulante);
             return Json(exito);
+        }
+
+        public async Task<IActionResult> Validar(string email, string password)
+        {
+            bool response;
+            response = await CandidatoRepository.ValidarCredenciales(email, password);
+            return Json(response);
         }
     }
 }
