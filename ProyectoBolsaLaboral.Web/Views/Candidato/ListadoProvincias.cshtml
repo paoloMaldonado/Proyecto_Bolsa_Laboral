@@ -1,0 +1,10 @@
+﻿@model IEnumerable<Provincia>
+
+<label for="provSelect">Provincia</label>
+<select class="custom-select" id="provSelect" required>
+    <option selected disabled hidden>(Indicar)</option>
+    @foreach (var item in Model)
+    {
+        <option>@item.Nombre</option>
+    }
+</select>

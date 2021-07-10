@@ -1,0 +1,36 @@
+﻿@model IEnumerable<Departamento>
+
+<div class="col-md-6 mb-3">
+    <label for="depaCandidato">Departamento</label>
+    <select class="custom-select" id="depaCandidato" required>
+        <option selected disabled hidden>(Indicar)</option>
+        @foreach (var item in Model)
+        {
+            <option data-id="@item.IdDepartamento">@item.Nombre</option>
+        }
+
+    </select>
+</div>
+
+<div class="col-md-6 mb-3" id="listaProvincias">
+
+</div>
+
+<script>
+
+    $("#depaCandidato").change(function () {
+        var idDep = $(this).children("option:selected").attr('data-id');
+
+        $.ajax({
+            type: "GET",
+            url: "ListadoProvincias",
+            data: { idDepartamento: idDep },
+            cache: false,
+            success: function (dataHtml) {
+                $("#listaProvincias").html(dataHtml);
+            }
+        });
+
+    })
+
+</script>

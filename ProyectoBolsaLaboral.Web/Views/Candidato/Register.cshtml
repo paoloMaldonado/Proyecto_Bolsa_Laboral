@@ -1,4 +1,7 @@
-﻿<!DOCTYPE html>
+﻿@Html.Hidden("RedirectTo", Url.Action("Index", "Candidato"));
+
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -62,17 +65,17 @@
                     </div>
                 </div>
             </div>
-            <div class="form-row">
+            <div class="form-row" , id="formRadioGenero">
                 <div class="form-group col-md-8 mb-3">
                     <div class="row col-md-6">
                         <label for="">Género</label>
                     </div>
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="rbMascCand" value="option1">
+                        <input class="form-check-input" type="radio" name="rbGenero" id="rbMascCand" value="Masculino">
                         <label class="form-check-label" for="rbMascCand">Masculino</label>
                     </div>
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="rbFemCand" value="option2">
+                        <input class="form-check-input" type="radio" name="rbGenero" id="rbFemCand" value="Femenino">
                         <label class="form-check-label" for="rbFemCand">Femenino</label>
                     </div>
                 </div>
@@ -87,61 +90,61 @@
                     <input type="text" class="form-control" id="zipCand" value="" required>
                 </div>
             </div>
-            <div class="form-row">
-                <div class="col-md-6 mb-3">
-                    <label for="validationDefault04">Departamento</label>
-                    <select class="custom-select" id="validationDefault04" required>
-                        <option selected disabled value="">Choose...</option>
-                        <option>...</option>
-                    </select>
-                </div>
-                <div class="col-md-6 mb-3">
-                    <label for="validationDefault05">Provincia</label>
-                    <select class="custom-select" id="validationDefault05" required>
-                        <option selected disabled value="">Choose...</option>
-                        <option>...</option>
-                    </select>
-                </div>
+            <div class="form-row" id="listDepartamentosCandidato">
+                @*<div class="col-md-6 mb-3">
+                        <label for="validationDefault04">Departamento</label>
+                        <select class="custom-select" id="validationDefault04" required>
+                            <option selected disabled value="">Choose...</option>
+                            <option>...</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="validationDefault05">Provincia</label>
+                        <select class="custom-select" id="validationDefault05" required>
+                            <option selected disabled value="">Choose...</option>
+                            <option>...</option>
+                        </select>
+                    </div>*@
             </div>
-            <div class="form-row">
+            <div class="form-row" id="formRadioEst">
                 <div class="form-group col-md-10 mb-3">
                     <div class="row col-md-10">
                         <label for="">Tienes Estudios?</label>
                     </div>
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="siEst" value="option1">
+                        <input class="form-check-input" type="radio" name="radioEst" id="siEst" value=1>
                         <label class="form-check-label" for="siEst">Si</label>
                     </div>
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="noEst" value="option2">
+                        <input class="form-check-input" type="radio" name="radioEst" id="noEst" value=0>
                         <label class="form-check-label" for="noEst">No</label>
                     </div>
                 </div>
             </div>
-            <div class="form-row">
+            <div class="form-row" id="formRadioTrabaja">
                 <div class="form-group col-md-10 mb-3">
                     <div class="row col-md-10">
                         <label for="">Has trabajado antes?</label>
                     </div>
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="siTrab" value="option1">
+                        <input class="form-check-input" type="radio" name="radioTrab" id="siTrab" value=1>
                         <label class="form-check-label" for="siTrab">Si</label>
                     </div>
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="noTrab" value="option2">
+                        <input class="form-check-input" type="radio" name="radioTrab" id="noTrab" value=0>
                         <label class="form-check-label" for="noTrab">No</label>
                     </div>
                 </div>
             </div>
             <div class="form-group">
                 <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>
-                    <label class="form-check-label" for="invalidCheck2">
+                    <input class="form-check-input" type="checkbox" required>
+                    <label class="form-check-label">
                         Estoy de acuerdo con los términos y condiciones
                     </label>
                 </div>
             </div>
-            <button class="btn btn-primary mb-5" type="submit">Registrar</button>
+            <button class="btn btn-primary mb-5" id="btnResgitrarPostulante">Registrar</button>
         </form>
         <div class="dropdown-divider"></div>
         <a class="dropdown-item" asp-controller="Candidato" asp-action="index">¿Ya tienes una cuenta? ¡Ingresa!</a>
@@ -157,6 +160,75 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css" />
     <!-- datepicker -->
+
+
+    <script>
+
+        $("#btnResgitrarPostulante").click(function () {
+
+            let vNombre = $("#nomCand").val();
+            let vApellido = $("#apeCand").val();
+            let vEmail = $("#emailCand").val();
+            let vPassword = $("#passCand").val();
+            let vBirth = $("#birthCand").val();
+            let vRbGen = $("input[name=rbGenero]:checked", "#formRadioGenero").val();
+            let vTelef = $("#telefCand").val();
+            let vZip = $("#zipCand").val();
+            let vEstudia = (($("input[name=radioEst]:checked", "#formRadioEst").val()) == '1' ? true : false);
+            let vTrabaja = (($("input[name=radioTrab]:checked", "#formRadioTrabaja").val()) == '1' ? true : false);
+            let vEstado = 'Activo';
+
+            $.ajax({
+                type: "POST",
+                url: "Grabar",
+                cache: false,
+                data: {
+                    nombre: vNombre,
+                    apellido: vApellido,
+                    email: vEmail,
+                    password: vPassword,
+                    fechaNacimiento: vBirth,
+                    genero: vRbGen,
+                    telefono: vTelef,
+                    zipCode: vZip,
+                    tieneEstudio: vEstudia,
+                    tieneExperiencia: vTrabaja,
+                    estado: vEstado
+                },
+                success: function (exito) {
+                    if (exito) {
+                        console.log("OK");
+                        //var url = $("#RedirectTo").val();
+                        //location.href = url;
+                        //CargarListadoCliente();
+                        //$("#modalRegistroCliente").modal("toggle");
+                    } else {
+                        console.log("Error");
+                    }
+                }
+            });
+
+            console.log("finishing AJAX")
+
+        });
+
+
+
+        CargarListadoDepartamento();
+
+        function CargarListadoDepartamento() {
+            $.ajax({
+                type: "GET",
+                url: "listadoDepartamentos",
+                cache: false,
+                success: function (dataHtml) {
+                    $("#listDepartamentosCandidato").html(dataHtml);
+                }
+            });
+        }
+
+
+    </script>
 
 </body>
 </html>
