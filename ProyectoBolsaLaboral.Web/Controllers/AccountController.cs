@@ -12,5 +12,10 @@ namespace ProyectoBolsaLaboral.Web.Controllers
         {
             return RedirectToAction("Index", "User");
         }
+
+        public IActionResult LoginCompany()
+        {
+            return RedirectToAction("Index", "UserCorp");
+        }
     }
 }

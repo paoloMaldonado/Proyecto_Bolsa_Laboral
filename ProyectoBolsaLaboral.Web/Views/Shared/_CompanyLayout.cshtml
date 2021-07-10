@@ -23,17 +23,14 @@
             <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                 <ul class="navbar-nav flex-grow-1">
                     <li class="nav-item">
-                        <a class="nav-link text-black" asp-area="" asp-controller="Oferta" asp-action="Index">Buscar Empleo</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-black" asp-area="" asp-controller="Resume" asp-action="Index">Crear CV</a>
+                        <a class="nav-link text-black" asp-area="" asp-controller="" asp-action="Index">Crear oferta laboral</a>
                     </li>
                 </ul>
                 <div>
-                    <a class="pr-5">Bienvenido</a>
+                    <a class="pr-5">Corporativo</a>
                 </div>
                 <div>
-                    <a class="btn btn-primary btn-sm" asp-controller="Candidato" asp-action="Index">Cerrar sesión</a>
+                    <a class="btn btn-primary btn-sm" asp-controller="Empresa" asp-action="Index">Cerrar sesión</a>
                 </div>
             </div>
         </nav>
@@ -47,7 +44,7 @@
     <footer class="footer">
         <div class="text-center p-2" style="background-color: rgba(0, 0, 0, 0.05);">
             © 2021 Copyright:
-            <a class="text-reset fw-bold" asp-area="" asp-controller="User" asp-action="Index">Tu nuevo trabajo</a>
+            <a class="text-reset fw-bold" asp-area="" asp-controller="UserCorp" asp-action="Index">Tu nuevo trabajo</a>
         </div>
     </footer>
 
@@ -58,4 +55,3 @@
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
-

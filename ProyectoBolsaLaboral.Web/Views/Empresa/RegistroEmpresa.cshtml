@@ -40,11 +40,11 @@
             <div class="form-row">
                 <div class="col-md-6 mb-3">
                     <label for="emailCand">Correo Electrónico</label>
-                    <input type="email" class="form-control" id="emailCand" value="" required>
+                    <input type="email" class="form-control" id="emailEmp" value="" required>
                 </div>
                 <div class="col-md-6 mb-3">
                     <label for="passCand">Contraseña</label>
-                    <input type="password" class="form-control" id="passCand" required>
+                    <input type="password" class="form-control" id="passEmp" required>
                 </div>
             </div>
             <div class="form-row" style="padding-left:10px">
@@ -53,11 +53,11 @@
             <div class="form-row">
                 <div class="col-md-6 mb-3">
                     <label for="nomCand">Nombre Comercial de la Empresa</label>
-                    <input type="text" class="form-control" id="nomCand" value="" required>
+                    <input type="text" class="form-control" id="nomEmp" value="" required>
                 </div>
                 <div class="col-md-6 mb-3">
                     <label for="apeCand">RUC</label>
-                    <input type="text" class="form-control" id="apeCand" value="" required>
+                    <input type="text" class="form-control" id="rucEmp" value="" required>
                 </div>
             </div>
             <div class="form-row">
@@ -78,13 +78,6 @@
                 <div class="col-md-4 mb-3">
                     <label for="ProvEmp">Provincia</label>
                     <select class="custom-select" id="ProvEmp" required>
-                        <option selected disabled value="">Choose...</option>
-                        <option>...</option>
-                    </select>
-                </div>
-                <div class="col-md-4 mb-3">
-                    <label for="DistEmp">Distrito</label>
-                    <select class="custom-select" id="DistEmp" required>
                         <option selected disabled value="">Choose...</option>
                         <option>...</option>
                     </select>
@@ -117,58 +110,12 @@
             </div>
             <div class="form-row">
                 <div class="col-md-6 mb-3">
-                    <label for="telefCand">Teléfono</label>
-                    <input type="text" class="form-control" id="telefCand" value="" required>
+                    <label for="nomContact">Nombre</label>
+                    <input type="text" class="form-control" id="nomContact" value="" required>
                 </div>
                 <div class="col-md-6 mb-3">
-                    <label for="zipCand">Código Postal</label>
-                    <input type="text" class="form-control" id="zipCand" value="" required>
-                </div>
-            </div>
-            <div class="form-row">
-                <div class="col-md-6 mb-3">
-                    <label for="validationDefault04">Departamento</label>
-                    <select class="custom-select" id="validationDefault04" required>
-                        <option selected disabled value="">Choose...</option>
-                        <option>...</option>
-                    </select>
-                </div>
-                <div class="col-md-6 mb-3">
-                    <label for="validationDefault05">Provincia</label>
-                    <select class="custom-select" id="validationDefault05" required>
-                        <option selected disabled value="">Choose...</option>
-                        <option>...</option>
-                    </select>
-                </div>
-            </div>
-            <div class="form-row">
-                <div class="form-group col-md-10 mb-3">
-                    <div class="row col-md-10">
-                        <label for="">Tienes Estudios?</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="siEst" value="option1">
-                        <label class="form-check-label" for="siEst">Si</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="noEst" value="option2">
-                        <label class="form-check-label" for="noEst">No</label>
-                    </div>
-                </div>
-            </div>
-            <div class="form-row">
-                <div class="form-group col-md-10 mb-3">
-                    <div class="row col-md-10">
-                        <label for="">Has trabajado antes?</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="siTrab" value="option1">
-                        <label class="form-check-label" for="siTrab">Si</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="noTrab" value="option2">
-                        <label class="form-check-label" for="noTrab">No</label>
-                    </div>
+                    <label for="telfContact">Telefono</label>
+                    <input type="text" class="form-control" id="telfContact" value="" required>
                 </div>
             </div>
             <div class="form-group">
@@ -179,7 +126,7 @@
                     </label>
                 </div>
             </div>
-            <button class="btn btn-primary mb-5" type="submit">Registrar</button>
+            <button class="btn btn-primary mb-5" type="submit" id="btnRegistrarEmpresa">Registrar</button>
         </form>
         <div class="dropdown-divider"></div>
         <a class="dropdown-item" asp-controller="Candidato" asp-action="index">¿Ya tienes una cuenta? ¡Ingresa!</a>
@@ -195,6 +142,62 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css" />
     <!-- datepicker -->
+
+
+    <script>
+
+
+        $("#btnRegistrarEmpresa").click(function () {
+
+            let vEmail = $("#emailEmp").val();
+            let vPassword = $("#passEmp").val();
+            let vNombre = $("#nomEmp").val();
+            let vRUC = $("#rucEmp").val();
+            let vDireccion = $("#direcEmp").val();
+            let vDescripcion = $("#desEmp").val();
+            let vPaginaWeb = $("#pagWeb").val();
+            let vNombreContact = $("#nomContact").val();
+            let vtelefContact = $("#telfContact").val();
+            let vEstado = 'Activo';
+
+            $.ajax({
+                type: "POST",
+                url: "Grabar",
+                cache: false,
+                data: {
+                    email: vEmail,
+                    password: vPassword,
+                    razonSocial: vNombre,
+                    ruc: vRUC, 
+                    referenciaUbigeo: vDireccion,
+                    descripcion: vDescripcion,
+                    website: vPaginaWeb,
+                    contactName: vNombreContact,
+                    telefono: vtelefContact,
+                    estado: vEstado
+                },
+                success: function (exito) {
+                    if (exito) {
+                        alert("Datos registrados");
+                        //var url = $("#RedirectTo").val();
+                        //location.href = url;
+                        //CargarListadoCliente();
+                        //$("#modalRegistroCliente").modal("toggle");
+                    } else {
+                        alert("Hubo un error");
+                    }
+                }
+            });
+
+            alert("loading...");
+
+        });
+
+
+
+
+    </script>
+
 
 </body>
 </html>

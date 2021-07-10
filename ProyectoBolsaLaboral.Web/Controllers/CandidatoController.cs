@@ -60,6 +60,7 @@ namespace ProyectoBolsaLaboral.Web.Controllers
             return Json(exito);
         }
 
+        [HttpGet]
         public async Task<IActionResult> Validar(string email, string password)
         {
             bool response;
